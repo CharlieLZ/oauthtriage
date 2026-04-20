@@ -1,0 +1,57 @@
+{
+  "name": "oauthtriage",
+  "version": "0.1.0",
+  "description": "Local-first Google Workspace OAuth grant triage CLI.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CharlieLZ/oauthtriage.git"
+  },
+  "homepage": "https://github.com/CharlieLZ/oauthtriage#readme",
+  "bugs": {
+    "url": "https://github.com/CharlieLZ/oauthtriage/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "oauthtriage": "./dist/cli/oauthtriage.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "samples/oauthtriage-sample.csv"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "cli": "tsx cli/oauthtriage.ts",
+    "build:cli": "tsup cli/oauthtriage.ts --format esm --platform node --target node18 --out-dir dist/cli --clean",
+    "prepack": "npm run build:cli",
+    "test": "node --import tsx --test test/*.test.ts test/*.test.mjs",
+    "pack:dry-run": "npm pack --json --dry-run --ignore-scripts",
+    "scan": "tsx cli/oauthtriage.ts scan",
+    "sample": "tsx cli/oauthtriage.ts sample"
+  },
+  "keywords": [
+    "google-workspace",
+    "oauth",
+    "security",
+    "cli",
+    "csv"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "@types/react": "19.2.14",
+    "next": "^15.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tsup": "^8.5.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
