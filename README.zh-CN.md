@@ -1,5 +1,8 @@
 # OAuthTriage
 
+[![CI](https://github.com/CharlieLZ/oauthtriage/actions/workflows/ci.yml/badge.svg)](https://github.com/CharlieLZ/oauthtriage/actions/workflows/ci.yml)
+[![Release](https://github.com/CharlieLZ/oauthtriage/actions/workflows/publish.yml/badge.svg)](https://github.com/CharlieLZ/oauthtriage/actions/workflows/publish.yml)
+
 [English README](./README.md)
 
 OAuthTriage 是一个 `local-first` 的 Google Workspace OAuth 授权排查 CLI。

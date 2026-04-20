@@ -1,5 +1,8 @@
 # OAuthTriage
 
+[![CI](https://github.com/CharlieLZ/oauthtriage/actions/workflows/ci.yml/badge.svg)](https://github.com/CharlieLZ/oauthtriage/actions/workflows/ci.yml)
+[![Release](https://github.com/CharlieLZ/oauthtriage/actions/workflows/publish.yml/badge.svg)](https://github.com/CharlieLZ/oauthtriage/actions/workflows/publish.yml)
+
 [中文说明](./README.zh-CN.md)
 
 OAuthTriage is a local-first CLI for triaging risky third-party OAuth grants in Google Workspace.
