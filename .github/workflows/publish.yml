@@ -39,7 +39,11 @@ jobs:
       - name: Resolve package filename
         id: pack
         run: |
-          echo "filename=$(node -p "JSON.parse(require('node:fs').readFileSync('pack.json', 'utf8'))[0].filename")" >> "$GITHUB_OUTPUT"
+          node <<'EOF' >> "$GITHUB_OUTPUT"
+          const fs = require('node:fs');
+          const [{ filename }] = JSON.parse(fs.readFileSync('pack.json', 'utf8'));
+          console.log(`filename=${filename}`);
+          EOF
 
       - name: Create or update GitHub Release
         env:
