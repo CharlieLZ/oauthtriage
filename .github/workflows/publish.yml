@@ -33,8 +33,10 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Pack npm artifact
-        run: npm pack --json > pack.json
+      - name: Build and pack npm artifact
+        run: |
+          npm run build:cli
+          npm pack --json --ignore-scripts > pack.json
 
       - name: Resolve package filename
         id: pack
